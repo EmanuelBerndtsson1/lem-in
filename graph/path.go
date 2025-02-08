@@ -144,3 +144,54 @@ func fixAppend(a []string) []string {
 
 	return cpy
 }
+
+/*
+func moveAntsThroughPaths(farm Farm, paths []Path) {
+    antNumber := 1
+    totalAnts := farm.Ants
+
+    // Initialize the ant count in the start room
+    farm.Rooms[farm.Start].AntCount = totalAnts
+
+    // Move ants until all ants reach the end room
+    for farm.Rooms[farm.End].AntCount < totalAnts {
+        // Move ants already on paths
+        for _, path := range paths {
+            for i := len(path.Rooms) - 1; i > 0; i-- {
+                currentRoom := path.Rooms[i]
+                previousRoom := path.Rooms[i-1]
+
+                if farm.Rooms[previousRoom].AntCount > 0 {
+                    // Move ant to the current room
+                    farm.Rooms[currentRoom].AntCount++
+                    farm.Rooms[previousRoom].AntCount--
+
+                    // Print the ant's movement
+                    printAntMovement(farm.Rooms[currentRoom].Ant, currentRoom)
+                }
+            }
+        }
+
+        // Move new ants from the start room to the paths
+        for _, path := range paths {
+            if farm.Rooms[farm.Start].AntCount > 0 {
+                nextRoom := path.Rooms[1]
+
+                // Move ant to the next room on the path
+                farm.Rooms[nextRoom].AntCount++
+                farm.Rooms[farm.Start].AntCount--
+
+                // Assign the ant number to the room
+                farm.Rooms[nextRoom].Ant = antNumber
+                antNumber++
+
+                // Print the ant's movement
+                printAntMovement(farm.Rooms[nextRoom].Ant, nextRoom)
+            }
+        }
+
+        // Print a new line after each round of movements
+        fmt.Println()
+    }
+}
+*/
